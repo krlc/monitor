@@ -122,5 +122,5 @@ func main() {
     http.HandleFunc("/get", getLogHandler)
     http.HandleFunc("/stats", statsHandler)
     http.HandleFunc("/sc.js", logHandler)
-    log.Fatal(http.ListenAndServe(":80", nil))
+    log.Fatal(http.ListenAndServe(":8080", nil))
 }
