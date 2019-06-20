@@ -39,12 +39,14 @@ func main() {
             Method     string
             Host       string
             RemoteAddr string
+            CFCountry  string
             OtherData  string
             Time       string
         }{
             req.Header.Get("User-Agent"),
             req.Method,
             req.Host,
+            strings.Split(req.RemoteAddr, ":")[0],
             req.Header.Get("CF-IPCountry"),
             apiString,
             time.Now().In(loc).Format("Mon Jan 2 15:04:05"),
