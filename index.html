@@ -30,6 +30,7 @@
                 data = data.map(e => {
                     e = {...e, ...JSON.parse(e.OtherData)};
                     delete e.OtherData;
+                    delete e.status;
                     return e
                 });
 
